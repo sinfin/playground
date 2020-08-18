@@ -1,0 +1,8 @@
+.p-products-detail
+  .container
+    h1 = model.title
+
+    .p-products-detail__perex.p-rich-text
+      == model.perex
+
+    == cell('playground/products/gallery', model.images)
