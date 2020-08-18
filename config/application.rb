@@ -1,6 +1,8 @@
-require_relative 'boot'
+# frozen_string_literal: true
 
-require 'rails/all'
+require_relative "boot"
+
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -12,7 +14,7 @@ module Playground
     config.load_defaults 6.0
     config.exceptions_app = self.routes
 
-    config.time_zone = 'Prague'
+    config.time_zone = "Prague"
 
     config.generators do |g|
       g.stylesheets false
@@ -25,15 +27,15 @@ module Playground
     I18n.default_locale = :cs
 
     config.folio_console_locale = I18n.default_locale
-    config.autoload_paths << Rails.root.join('app/lib')
-    config.eager_load_paths << Rails.root.join('app/lib')
+    config.autoload_paths << Rails.root.join("app/lib")
+    config.eager_load_paths << Rails.root.join("app/lib")
 
     Rails.autoloaders.main.ignore("#{::Folio::Engine.root}/app/lib/folio/console/simple_form_components")
     Rails.autoloaders.main.ignore("#{::Folio::Engine.root}/app/lib/folio/console/simple_form_inputs")
 
     overrides = [
-      Folio::Engine.root.join('app/overrides').to_s,
-      Rails.root.join('app/overrides').to_s,
+      Folio::Engine.root.join("app/overrides").to_s,
+      Rails.root.join("app/overrides").to_s,
     ]
 
     overrides.each { |override| Rails.autoloaders.main.ignore(override) }

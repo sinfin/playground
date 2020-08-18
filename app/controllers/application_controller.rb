@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper Folio::Engine.helpers
 
   before_action do
-    if (params[:rmp] && account_signed_in?) || ENV['FORCE_MINI_PROFILER']
+    if (params[:rmp] && account_signed_in?) || ENV["FORCE_MINI_PROFILER"]
       Rack::MiniProfiler.authorize_request
     end
   end

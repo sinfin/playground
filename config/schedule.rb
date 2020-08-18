@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
@@ -19,17 +21,17 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :environment_variable, 'RACK_ENV'
-set :environment_variable, 'RAILS_ENV'
+set :environment_variable, "RACK_ENV"
+set :environment_variable, "RAILS_ENV"
 
-every 1.day, at: '4:30 am', roles: [:app] do
-  rake '-s sitemap:create'
+every 1.day, at: "4:30 am", roles: [:app] do
+  rake "-s sitemap:create"
 end
 
 every 1.minute do
-  rake 'folio_cache:conditional_clear'
+  rake "folio_cache:conditional_clear"
 end
 
 every 1.minute do
-  rake 'folio_cache:conditional_clear'
+  rake "folio_cache:conditional_clear"
 end

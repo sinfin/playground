@@ -17,8 +17,8 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
-guard :rubocop, cli: ["--auto-correct"] do
-  watch(%r{^(app|test)/.+\.rb$})
+guard :rubocop, cli: ["--auto-correct-all"] do
+  watch(%r{^(app|config|test)/.+\.rb$})
   watch(%r{^lib/.+\.(rb|rake)$})
 
   watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
