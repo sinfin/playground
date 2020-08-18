@@ -9,17 +9,17 @@ development:
 
 test:
   <<: *default
-  database: playground_test_<%= (branch = `git rev-parse --abbrev-ref HEAD`.chomp).empty? ? 'default' : branch.gsub(/\W/, '_') %>
+  database: playground_test_<%= (branch = `git rev-parse --abbrev-ref HEAD 2>/dev/null`.chomp).empty? ? 'default' : branch.gsub(/\W/, '_') %>
 
 staging:
   <<: *default
   database: playground_staging
 
 production:
-  username: 
-  password: 
+  username:
+  password:
   adapter: postgresql
-  host: 
+  host:
   port: 5432
   database: playground_production
   encoding: utf8
