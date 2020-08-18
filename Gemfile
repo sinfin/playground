@@ -18,6 +18,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'folio', github: 'sinfin/folio'
+# gem 'folio', path: '../folio'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -45,3 +48,56 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'turbolinks'
+gem 'dotenv-rails'
+gem 'autoprefixer-rails', '9.8.5'
+gem 'slim-rails'
+gem 'cells'
+gem 'cells-slim', '0.0.6'
+gem 'cells-rails', '0.1.0'
+gem 'route_translator'
+gem 'breadcrumbs_on_rails'
+gem 'sentry-raven'
+gem 'devise-i18n'
+gem 'rails-i18n'
+gem 'mini_racer'
+gem 'premailer', github: 'sinfin/premailer'
+gem 'premailer-rails'
+gem 'rubyzip'
+gem 'rack-mini-profiler'
+gem "uglifier", ">= 1.3.0"
+
+group :test do
+  gem 'factory_bot'
+  gem 'rack_session_access'
+end
+
+group :development, :test do
+  gem 'faker', require: false
+end
+
+group :development do
+  gem 'rbnacl', '< 5.0'
+  gem 'rbnacl-libsodium'
+  gem 'bcrypt_pbkdf', '< 2.0'
+  gem 'ed25519'
+  gem 'rubocop'
+  gem 'rubocop-minitest'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rails_config'
+  gem 'rubocop-rake'
+  gem 'annotate'
+  gem 'guard-rubocop'
+  gem 'guard-slimlint'
+  gem 'letter_opener'
+  gem 'pry-rails'
+  gem 'slack-notifier'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-sinfin', git: 'git@bitbucket.org:Sinfin/capistrano-sinfin.git', branch: 'master'
+  gem 'capistrano-serviceman', github: 'Sinfin/capistrano-serviceman', branch: 'master'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'rails-flog', require: 'flog'
+end
