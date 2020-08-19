@@ -1,8 +1,17 @@
 .p-layout-header {
   .container {
-    background: orange;
-    height: 86px;
     display: flex;
     align-items: center;
+    height: 86px;
+    justify-content: space-between;
+  }
+
+  &__left {
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
