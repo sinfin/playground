@@ -32,5 +32,3 @@ vendor/cache
 config/deploy/*/.env
 
 public/assets/*
-run_browserSync.sh
-run_server.sh

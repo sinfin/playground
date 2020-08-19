@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="34px" viewBox="0 0 140 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img-header-claim 2</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="d.hd.header-new" transform="translate(-301.000000, -27.000000)">
+            <g id="img-header-claim-+-logo" transform="translate(150.000000, 19.000000)">
+                <g id="img-header-claim" transform="translate(151.000000, 8.000000)">
+                    <text id="Radost-z-fotek" font-family="HelveticaNeue, Helvetica Neue" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="1" fill="#212121">
+                        <tspan x="28.5" y="16.24">radost z fotek</tspan>
+                    </text>
+                    <path d="M139.5,0.5 L139.5,33.5 L17.7071068,33.5 L1.20710678,17 L17.7071068,0.5 L139.5,0.5 Z" id="Rectangle-39" stroke="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
