@@ -97,8 +97,8 @@ group :development do
   gem "pry-rails"
   gem "slack-notifier"
   gem "capistrano-rails", require: false
-  gem "capistrano-sinfin", git: "git@bitbucket.org:Sinfin/capistrano-sinfin.git", branch: "master"
-  gem "capistrano-serviceman", github: "Sinfin/capistrano-serviceman", branch: "master"
+  # gem "capistrano-sinfin", git: "git@bitbucket.org:Sinfin/capistrano-sinfin.git", branch: "master"
+  # gem "capistrano-serviceman", github: "Sinfin/capistrano-serviceman", branch: "master"
   gem "better_errors"
   gem "binding_of_caller"
   gem "rails-flog", require: "flog"

@@ -1,31 +1,4 @@
 GIT
-  remote: git@bitbucket.org:Sinfin/capistrano-sinfin.git
-  revision: dc402d1cb34ccc0b80bdf0209a408a5b2b1087a4
-  branch: master
-  specs:
-    capistrano-sinfin (0.1.0)
-      activesupport
-      capistrano
-      capistrano-db-tasks
-      capistrano-nginx
-      capistrano-rails
-      capistrano-rails-console
-      capistrano-rvm
-      capistrano-shell
-      capistrano-sidekiq
-      capistrano3-puma
-      rails
-      sitemap_generator
-      whenever
-
-GIT
-  remote: https://github.com/Sinfin/capistrano-serviceman.git
-  revision: f2d015f6382984b67769d830a1fb52f604474153
-  branch: master
-  specs:
-    capistrano-serviceman (0.1.0)
-
-GIT
   remote: https://github.com/sinfin/folio.git
   revision: 4c4cd287886dbe0a325902cf506dc30f00240510
   specs:
@@ -200,28 +173,9 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-bundler (2.0.1)
       capistrano (~> 3.1)
-    capistrano-db-tasks (0.6)
-      capistrano (>= 3.0.0)
-    capistrano-nginx (1.0.0)
-      capistrano (~> 3.1)
     capistrano-rails (1.6.1)
       capistrano (~> 3.1)
       capistrano-bundler (>= 1.1, < 3)
-    capistrano-rails-console (2.3.0)
-      capistrano (>= 3.5.0, < 4.0.0)
-      sshkit-interactive (~> 0.3.0)
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
-    capistrano-shell (0.2.0)
-      capistrano (~> 3.1)
-    capistrano-sidekiq (1.0.2)
-      capistrano (>= 3.9.0)
-      sidekiq (>= 3.4)
-    capistrano3-puma (4.0.0)
-      capistrano (~> 3.7)
-      capistrano-bundler
-      puma (~> 4.0)
     capybara (3.33.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -588,8 +542,6 @@ GEM
     sshkit (1.21.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    sshkit-interactive (0.3.0)
-      sshkit (~> 1.12)
     temple (0.8.2)
     thor (1.0.1)
     thread_safe (0.3.6)
@@ -637,8 +589,6 @@ DEPENDENCIES
   breadcrumbs_on_rails
   byebug
   capistrano-rails
-  capistrano-serviceman!
-  capistrano-sinfin!
   capybara (>= 2.15)
   cells
   cells-rails (= 0.1.0)
