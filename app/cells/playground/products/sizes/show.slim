@@ -1,0 +1,7 @@
+- if model.count > 0
+  .h4 = 'Zvolte rozměr:'
+  .p-products-sizes
+    - model.each do |item|
+      = item[:label]
+      = item[:value]
+      = item[:checked]

@@ -23,13 +23,7 @@
         .p-rich-text
           == model.perex
 
-        .h4 = 'Zvolte rozměr:'
-
-        - model.sizes.each do |item|
-          = item[:label]
-          = item[:value]
-          = item[:checked]
-          br
+        == cell('playground/products/sizes', model.sizes)
 
         a.btn.btn-3d.mr-3[button-text='Create'] = 'Create'
         a.btn.btn-3d.inverse[button-text='Create inverse'] = 'Create inverse'
