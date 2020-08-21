@@ -13,6 +13,7 @@ $secondary: $gray;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-rounded: false;
+$enable-shadows: false;
 $enable-rfs: false;
 
 
@@ -30,6 +31,15 @@ $spacers: (0: 0,
   4: $spacer * 1.25,
   5: $spacer * 1.5,
 );
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-width: 1px;
+$border-color: $black;
+$border-radius: 0;
 
 
 // Typography
@@ -111,3 +121,26 @@ $breadcrumb-bg: transparent;
 $breadcrumb-divider-color: $secondary;
 $breadcrumb-active-color: $secondary;
 $breadcrumb-border-radius: null;
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 0.5rem;
+
+$btn-link-color: $link-color !default;
+$btn-link-hover-color: $link-hover-color;
+
+$btn-block-spacing-y: .5rem !default;
+
+$btn-transition: color .15s ease-in-out,
+background-color .15s ease-in-out,
+border-color .15s ease-in-out,
+box-shadow .15s ease-in-out !default;
