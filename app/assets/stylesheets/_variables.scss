@@ -24,7 +24,9 @@ $spacers: (0: 0,
 // Font, line-height, and color for body text, headings, and more.
 
 $font-weight-bold: bold;
-$font-size-base: 0.75rem;
+$font-size-base: 0.875rem; // 14px
+$font-size-sm: 0.75rem; // 12px
+$font-size-lg: 1rem; // 16px
 
 $headings-color: $body-color;
 $headings-font-weight: $font-weight-bold;
@@ -49,6 +51,8 @@ $h1-font-size: 62px;
 $h1mag-font-size: 32px;
 $h2-font-size: 36px;
 $h3-font-size: 16px;
+$h4-font-size: 12px;
+
 $h1-margin-top: 0;
 $h1-margin-bottom: 2 * $spacer;
 

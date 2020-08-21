@@ -1,0 +1,9 @@
+.p-products-gallery {
+  display: flex;
+  margin: $spacer -0.375rem;
+
+  .f-image {
+    width: 100%;
+    margin: 0.375rem;
+  }
+}

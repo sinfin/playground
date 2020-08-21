@@ -1,16 +1,17 @@
 .container
-  h1 = 'Nadpis H1'
-  h1.h1mag = 'Nadpis H1 mag'
-  h2 = 'Nadpis H2'
-  h3 = 'Nadpis H3'
-
-  .btn = 'bazinga'
 
 .p-products-detail
   .container
-    h1 = model.title
+    .row
+      .col-12.col-md-6
+        = image model.images[0], '555x555'
+        == cell('playground/products/gallery', model.images)
 
-    .p-products-detail__perex.p-rich-text
-      == model.perex
+      .col-12.col-md-6
+        h1 = model.title
+        h3 = 'SEO Podtitulek vybrané varianty'
 
-    == cell('playground/products/gallery', model.images)
+        .btn.btn- = 'bazinga'
+
+        .p-products-detail__perex.p-rich-text
+          == model.perex
