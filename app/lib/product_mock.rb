@@ -12,4 +12,24 @@ class ProductMock < OpenStruct
   def images
     Folio::Image.limit(5)
   end
+
+  def sizes
+    [
+      {
+        label: '17 x 17 cm',
+        value: '17_17',
+        checked: false
+      },
+      {
+        label: '20 x 20 cm',
+        value: '20_20',
+        checked: true
+      },
+      {
+        label: '30 x 20 cm',
+        value: '30_20',
+        checked: false
+      }
+    ]
+  end
 end
