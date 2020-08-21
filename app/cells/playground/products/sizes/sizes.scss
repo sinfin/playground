@@ -1,0 +1,19 @@
+.p-products-sizes {
+  display: flex;
+}
+
+.p-products-sizes-item {
+  cursor: pointer;
+  display: flex;
+
+  &::before {}
+
+  &__input {
+    appearance: none;
+  }
+
+  &__label {
+    border: 1px solid green;
+    width: 33.33%;
+  }
+}

@@ -2,6 +2,11 @@ $black: black;
 $white: white;
 $body-color: $black;
 $gray: #8C8C8C;
+$gray-100: #B8B8B8; // Input, Textarea border
+$gray-200: #C5C5C5; // Radio, Checkbox border
+$gray-300: #CDCDCD; // Radio, Checkbox border
+$gray-400: #E2E2E2; // General border color
+$gray-500: #F0F0F0; // Form element background
 
 $primary: $black;
 $secondary: $gray;
@@ -133,7 +138,7 @@ $breadcrumb-border-radius: null;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-padding-y: 0.5rem;
-$btn-padding-x: 0.5rem;
+$btn-padding-x: 1rem;
 
 $btn-link-color: $link-color !default;
 $btn-link-hover-color: $link-hover-color;
