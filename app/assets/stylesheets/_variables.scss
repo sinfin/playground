@@ -1,6 +1,19 @@
 $black: black;
 $white: white;
 $body-color: $black;
+$gray: #8C8C8C;
+
+$primary: $black;
+$secondary: $gray;
+
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded: false;
+$enable-rfs: false;
 
 
 // Spacing
@@ -85,3 +98,16 @@ $link-color: #8c8c8c;
 $link-decoration: underline !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none;
+
+
+
+// Breadcrumbs
+$breadcrumb-font-size: 0.75rem;
+$breadcrumb-padding-y: $spacer;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding-x: .5rem !default;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $secondary;
+$breadcrumb-active-color: $secondary;
+$breadcrumb-border-radius: null;

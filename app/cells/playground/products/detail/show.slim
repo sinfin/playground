@@ -1,5 +1,14 @@
 .container
 
+  nav[aria-label="breadcrumb"]
+    ul.breadcrumb
+      li.breadcrumb-item
+        a href="/" Home
+      li.breadcrumb-item
+        a href="/fotky/" Fotky
+      li.breadcrumb-item.active
+        span Krásné Fotky
+
 .p-products-detail
   .container
     .row
@@ -11,7 +20,8 @@
         h1 = model.title
         h3 = 'SEO Podtitulek vybrané varianty'
 
-        .btn.btn- = 'bazinga'
-
-        .p-products-detail__perex.p-rich-text
+        .p-rich-text
           == model.perex
+
+        .btn.btn-3d = 'Create'
+

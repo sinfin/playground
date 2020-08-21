@@ -6,7 +6,7 @@ class ProductMock < OpenStruct
   end
 
   def perex
-    "<p>Print square and round sticky photo magnets from your Instagram, mobile or computer on high-quality photograph paper. Place them on your fridge or give them as a gift!</p>"
+    "<p class=\"lead\">Print square and round sticky photo magnets from your Instagram, mobile or computer on high-quality photograph paper. Place them on your fridge or give them as a gift!</p>"
   end
 
   def images
