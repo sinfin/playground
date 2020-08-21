@@ -1,5 +1,7 @@
 $black: black;
 $white: white;
+$body-color: $black;
+
 
 // Spacing
 //
@@ -8,8 +10,7 @@ $white: white;
 // You can add more entries to the $spacers map, should you need more variation.
 
 $spacer: 1rem;
-$spacers: (
-  0: 0,
+$spacers: (0: 0,
   1: $spacer / 2,
   2: $spacer * 0.75,
   3: $spacer,
@@ -17,23 +18,37 @@ $spacers: (
   5: $spacer * 1.5,
 );
 
-$body-color: $black;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
 $font-weight-bold: bold;
 $font-size-base: 0.75rem;
 
 $headings-color: $body-color;
 $headings-font-weight: $font-weight-bold;
 $headings-letter-spacing: normal;
-$headings-line-height: normal;
+$headings-line-height: 1.25;
 
-$font-family-sans-serif-default: "Helvetica Neue", Arial, sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif-default: "Helvetica Neue",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
 
 $font-family-sans-serif: $font-family-sans-serif-default;
+$font-family-polaris: "Polaris-Light",
+$font-family-sans-serif-default;
 
 $headings-margin-top: $spacer / 2;
 $headings-margin-bottom: $spacer;
 
+$h1-font-size: 62px;
+$h1mag-font-size: 32px;
+$h2-font-size: 36px;
+$h3-font-size: 16px;
 $h1-margin-top: 0;
 $h1-margin-bottom: 2 * $spacer;
 
@@ -51,8 +66,7 @@ $enable-validation-icons: false;
 // Define the maximum width of `.container` for different screen sizes.
 // scss-docs-start container-max-widths
 
-$container-max-widths: (
-  sm: 540px,
+$container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1170px,
