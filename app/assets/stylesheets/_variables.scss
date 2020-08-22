@@ -73,7 +73,7 @@ $font-family-polaris: "Polaris-Light",
 $font-family-sans-serif-default;
 
 $headings-margin-top: $spacer / 2;
-$headings-margin-bottom: $spacer;
+$headings-margin-bottom: $spacer * 0.75;
 
 $h1-font-size: 62px;
 $h1mag-font-size: 32px;

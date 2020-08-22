@@ -1,19 +1,62 @@
 .p-products-sizes {
   display: flex;
+  margin: -5px;
 }
 
 .p-products-sizes-item {
+  padding: 5px;
+  margin: 0;
   cursor: pointer;
   display: flex;
-
-  &::before {}
+  position: relative;
+  font-size: $font-size-sm;
+  width: 33.33%;
 
   &__input {
     appearance: none;
+
+    &:checked+.p-products-sizes-item__label {
+
+      border: 2px solid $black;
+      margin: -1px;
+
+      &::after {
+        display: block;
+      }
+    }
   }
 
+
   &__label {
-    border: 1px solid green;
-    width: 33.33%;
+    border: $border-width solid $gray-400;
+    white-space: nowrap;
+    position: relative;
+    display: inline-flex;
+    padding: 1rem 1rem 1rem 2.75rem;
+    width: 100%;
+
+    &::before {
+      border-radius: 50%;
+      border: $border-width solid $gray-400;
+      display: block;
+      position: absolute;
+      content: '';
+      left: 1rem;
+      top: 1rem;
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &::after {
+      border-radius: 50%;
+      content: '';
+      display: none;
+      position: absolute;
+      background: $black;
+      width: 0.5rem;
+      height: 0.5rem;
+      left: 1.25rem;
+      top: 1.25rem;
+    }
   }
 }
