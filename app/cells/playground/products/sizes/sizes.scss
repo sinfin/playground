@@ -13,7 +13,7 @@
   width: 33.33%;
 
   &__input {
-    appearance: none;
+    display: none;
 
     &:checked+.p-products-sizes-item__label {
 

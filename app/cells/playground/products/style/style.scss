@@ -1,0 +1,43 @@
+.p-products-style {
+  display: flex;
+  margin: -5px;
+}
+
+.p-products-style-item {
+  padding: 5px;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  font-size: $font-size-sm;
+  width: 50%;
+
+  &__input {
+    display: none;
+
+    &:checked+.p-products-style-item__label {
+
+      border: 2px solid $black;
+      margin: -1px;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  &__label {
+    border: $border-width solid $gray-400;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__text {
+    padding: 0.5rem 1rem;
+  }
+
+  &__image {
+    display: block;
+  }
+}
