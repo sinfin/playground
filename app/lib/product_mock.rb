@@ -33,7 +33,7 @@ class ProductMock < OpenStruct
     ]
   end
 
-  def style
+  def styles
     [
       {
         label: "Papírová obálka s potiskem",

@@ -1,18 +1,18 @@
 - if model.count > 0
   h4.h4 = 'Zvolte styl:'
-  .p-products-style.mb-5
+  .p-products-styles.mb-5
     - model.each do |item|
-      label.p-products-style-item
-        input.p-products-style-item__input[
+      label.p-products-styles-item
+        input.p-products-styles-item__input[
           name="product_style"
           type="radio"
           value=item[:value]
           checked=item[:selected]
         ]
-        .p-products-style-item__label
-          img.p-products-style-item__image[
+        .p-products-styles-item__label
+          img.p-products-styles-item__image[
             src = item[:imageUrl]
             alt = item[:label]
           ]
-          span.p-products-style-item__text
+          span.p-products-styles-item__text
             = item[:label]

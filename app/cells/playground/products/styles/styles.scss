@@ -1,9 +1,9 @@
-.p-products-style {
+.p-products-styles {
   display: flex;
   margin: -5px;
 }
 
-.p-products-style-item {
+.p-products-styles-item {
   padding: 5px;
   margin: 0;
   cursor: pointer;
@@ -15,8 +15,7 @@
   &__input {
     display: none;
 
-    &:checked+.p-products-style-item__label {
-
+    &:checked + .p-products-styles-item__label {
       border: 2px solid $black;
       margin: -1px;
 
@@ -40,4 +39,4 @@
   &__image {
     display: block;
   }
-} 
+}
