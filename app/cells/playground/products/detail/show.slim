@@ -20,7 +20,7 @@
         h1 = model.title
         h3 = 'SEO Podtitulek vybrané varianty'
 
-        .p-rich-text
+        .p-rich-text.mb-5
           == model.perex
 
         == cell('playground/products/sizes', model.sizes)
@@ -29,5 +29,4 @@
 
         == cell('playground/products/colors', model.colors)
 
-        a.btn.btn-3d.mr-3[button-text='Create'] = 'Create'
-        a.btn.btn-3d.inverse[button-text='Create inverse'] = 'Create inverse'
+        == cell('playground/products/info', model)

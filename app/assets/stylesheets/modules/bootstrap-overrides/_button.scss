@@ -14,7 +14,7 @@
   &::before {
     border: $border-width solid $border-color;
     background-color: $white;
-    color: black;
+    color: $black;
     content: attr(button-text);
     display: block;
     padding: $btn-padding-y $btn-padding-x;
@@ -31,7 +31,7 @@
     background-color: $white;
     position: absolute;
     border: $border-width solid $border-color;
-    content: '';
+    content: "";
     display: block;
     left: 6px;
     bottom: 7px;
