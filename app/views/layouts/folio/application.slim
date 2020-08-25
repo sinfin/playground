@@ -3,7 +3,10 @@ html lang=I18n.locale
   head
     = render partial: 'layouts/folio/head'
     = render partial: 'layouts/folio/favicon'
-
+    link[
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    ]
   body.p-layout-body
     == cell('playground/layout/header')
 

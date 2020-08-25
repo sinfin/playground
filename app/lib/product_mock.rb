@@ -18,7 +18,6 @@ class ProductMock < OpenStruct
       {
         label: "17 x 17 cm",
         value: "17_17",
-        selected: false
       },
       {
         label: "20 x 20 cm",
@@ -28,7 +27,6 @@ class ProductMock < OpenStruct
       {
         label: "30 x 20 cm",
         value: "30_20",
-        selected: false
       }
     ]
   end
@@ -39,13 +37,46 @@ class ProductMock < OpenStruct
         label: "Papírová obálka s potiskem",
         imageUrl: "https://picsum.photos/id/1/54/54",
         value: "a",
-        selected: true
+        # selected: true
       },
       {
         label: "Papírová obálka s potiskem přímo na kartonu",
         imageUrl: "https://picsum.photos/id/10/54/54",
         value: "a",
+      },
+    ]
+  end
+
+  def colors
+    [
+      {
+        value: "#515652",
         selected: true
+      },
+      {
+        value: "#FFFFFF",
+        addBorder: true
+      },
+      {
+        value: "#53C1B9",
+      },
+      {
+        value: "#D2486A",
+      },
+      {
+        value: "#FED74D",
+      },
+      {
+        value: "#50354A",
+      },
+      {
+        value: "#F89CA1",
+      },
+      {
+        value: "#849CB1",
+      },
+      {
+        value: "#D89A36",
       },
     ]
   end

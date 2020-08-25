@@ -1,2 +1,14 @@
-.p-products-color
-  = model
+- if model.count > 0
+  h4.h4 = 'Zvolte barvu hřbetu:'
+
+  .p-products-colors.mb-5
+    - model.each do |item|
+      .p-products-colors-item
+        span.p-products-colors-item__square[
+          style="background-color:#{item[:value]}"
+          data-border=item[:addBorder]
+        ]
+    .p-products-colors-item
+      span.p-products-colors-item__square.p-products-colors-item__add
+        input.p-products-colors-item__input[type="color"]
+        i.material-icons = 'colorize'
