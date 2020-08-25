@@ -3,10 +3,16 @@
   .p-products-style.mb-5
     - model.each do |item|
       label.p-products-style-item
-        input.p-products-style-item__input[name="product_style" type="radio" value=item[:value] checked=item[:selected]]
+        input.p-products-style-item__input[
+          name="product_style"
+          type="radio"
+          value=item[:value]
+          checked=item[:selected]
+        ]
         .p-products-style-item__label
-          img.p-products-style-item__image src = item[:imageUrl] alt = item[:label]
+          img.p-products-style-item__image[
+            src = item[:imageUrl]
+            alt = item[:label]
+          ]
           span.p-products-style-item__text
             = item[:label]
-
-

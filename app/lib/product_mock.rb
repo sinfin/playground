@@ -16,18 +16,18 @@ class ProductMock < OpenStruct
   def sizes
     [
       {
-        label: '17 x 17 cm',
-        value: '17_17',
+        label: "17 x 17 cm",
+        value: "17_17",
         selected: false
       },
       {
-        label: '20 x 20 cm',
-        value: '20_20',
+        label: "20 x 20 cm",
+        value: "20_20",
         selected: true
       },
       {
-        label: '30 x 20 cm',
-        value: '30_20',
+        label: "30 x 20 cm",
+        value: "30_20",
         selected: false
       }
     ]
@@ -36,15 +36,15 @@ class ProductMock < OpenStruct
   def style
     [
       {
-        label: 'Papírová obálka s potiskem',
-        imageUrl: 'https://picsum.photos/id/1/54/54',
-        value: 'a',
+        label: "Papírová obálka s potiskem",
+        imageUrl: "https://picsum.photos/id/1/54/54",
+        value: "a",
         selected: true
       },
       {
-        label: 'Papírová obálka s potiskem přímo na kartonu',
-        imageUrl: 'https://picsum.photos/id/10/54/54',
-        value: 'a',
+        label: "Papírová obálka s potiskem přímo na kartonu",
+        imageUrl: "https://picsum.photos/id/10/54/54",
+        value: "a",
         selected: true
       },
     ]
