@@ -1,17 +1,16 @@
 $black: black;
 $white: white;
 $body-color: $black;
-$gray: #8C8C8C;
-$gray-100: #B8B8B8; // Input, Textarea border
-$gray-200: #C5C5C5; // Radio, Checkbox border
-$gray-300: #CDCDCD; // Radio, Checkbox border
-$gray-400: #E2E2E2; // General border color
-$gray-500: #F0F0F0; // Form element background
+$gray: #8c8c8c;
+$gray-100: #b8b8b8; // Input, Textarea border
+$gray-200: #c5c5c5; // Radio, Checkbox border
+$gray-300: #cdcdcd; // Radio, Checkbox border
+$gray-400: #e2e2e2; // General border color
+$gray-500: #f0f0f0; // Form element background
 
 $primary: $black;
 $secondary: $gray;
-
-
+$danger: #d0021b;
 
 // Options
 //
@@ -21,7 +20,6 @@ $enable-rounded: false;
 $enable-shadows: false;
 $enable-rfs: false;
 
-
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
@@ -29,14 +27,14 @@ $enable-rfs: false;
 // You can add more entries to the $spacers map, should you need more variation.
 
 $spacer: 1rem;
-$spacers: (0: 0,
+$spacers: (
+  0: 0,
   1: $spacer / 2,
   2: $spacer * 0.75,
   3: $spacer,
   4: $spacer * 1.25,
   5: $spacer * 1.5,
 );
-
 
 // Components
 //
@@ -45,7 +43,6 @@ $spacers: (0: 0,
 $border-width: 1px;
 $border-color: $black;
 $border-radius: 0;
-
 
 // Typography
 //
@@ -61,16 +58,11 @@ $headings-font-weight: $font-weight-bold;
 $headings-letter-spacing: normal;
 $headings-line-height: 1.25;
 
-$font-family-sans-serif-default: "Helvetica Neue",
-Arial,
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol";
+$font-family-sans-serif-default: "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $font-family-sans-serif: $font-family-sans-serif-default;
-$font-family-polaris: "Polaris-Light",
-$font-family-sans-serif-default;
+$font-family-polaris: "Polaris-Light", $font-family-sans-serif-default;
 
 $headings-margin-top: $spacer / 2;
 $headings-margin-bottom: $spacer * 0.75;
@@ -98,7 +90,8 @@ $enable-validation-icons: false;
 // Define the maximum width of `.container` for different screen sizes.
 // scss-docs-start container-max-widths
 
-$container-max-widths: (sm: 540px,
+$container-max-widths: (
+  sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1170px,
@@ -114,20 +107,16 @@ $link-decoration: underline !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none;
 
-
-
 // Breadcrumbs
 $breadcrumb-font-size: 0.75rem;
 $breadcrumb-padding-y: $spacer;
 $breadcrumb-padding-x: 0;
-$breadcrumb-item-padding-x: .5rem !default;
+$breadcrumb-item-padding-x: 0.5rem !default;
 $breadcrumb-margin-bottom: 0;
 $breadcrumb-bg: transparent;
 $breadcrumb-divider-color: $secondary;
 $breadcrumb-active-color: $secondary;
 $breadcrumb-border-radius: null;
-
-
 
 // Buttons + Forms
 //
@@ -143,9 +132,7 @@ $btn-padding-x: 1rem;
 $btn-link-color: $link-color !default;
 $btn-link-hover-color: $link-hover-color;
 
-$btn-block-spacing-y: .5rem !default;
+$btn-block-spacing-y: 0.5rem !default;
 
-$btn-transition: color .15s ease-in-out,
-background-color .15s ease-in-out,
-border-color .15s ease-in-out,
-box-shadow .15s ease-in-out !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
