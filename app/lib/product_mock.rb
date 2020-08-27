@@ -13,6 +13,10 @@ class ProductMock < OpenStruct
     Folio::Image.limit(5)
   end
 
+  def price
+    39
+  end
+
   def sizes
     [
       {
@@ -37,7 +41,7 @@ class ProductMock < OpenStruct
         label: "Papírová obálka s potiskem",
         imageUrl: "https://picsum.photos/id/1/54/54",
         value: "a",
-        # selected: true
+        selected: true
       },
       {
         label: "Papírová obálka s potiskem přímo na kartonu",
@@ -51,7 +55,6 @@ class ProductMock < OpenStruct
     [
       {
         value: "#515652",
-        selected: true
       },
       {
         value: "#FFFFFF",
@@ -59,6 +62,7 @@ class ProductMock < OpenStruct
       },
       {
         value: "#53C1B9",
+        selected: true
       },
       {
         value: "#D2486A",

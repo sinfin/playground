@@ -15,7 +15,7 @@
   &__input {
     display: none;
 
-    &:checked + .p-products-styles-item__label {
+    &:checked+.p-products-styles-item__label {
       border: 2px solid $black;
       margin: -1px;
 
@@ -33,7 +33,7 @@
   }
 
   &__text {
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
   }
 
   &__image {

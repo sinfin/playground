@@ -27,8 +27,7 @@ $enable-rfs: false;
 // You can add more entries to the $spacers map, should you need more variation.
 
 $spacer: 1rem;
-$spacers: (
-  0: 0,
+$spacers: (0: 0,
   1: $spacer / 2,
   2: $spacer * 0.75,
   3: $spacer,
@@ -58,11 +57,16 @@ $headings-font-weight: $font-weight-bold;
 $headings-letter-spacing: normal;
 $headings-line-height: 1.25;
 
-$font-family-sans-serif-default: "Helvetica Neue", Arial, sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif-default: "Helvetica Neue",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
 
 $font-family-sans-serif: $font-family-sans-serif-default;
-$font-family-polaris: "Polaris-Light", $font-family-sans-serif-default;
+$font-family-polaris: "Polaris-Light",
+$font-family-sans-serif-default;
 
 $headings-margin-top: $spacer / 2;
 $headings-margin-bottom: $spacer * 0.75;
@@ -90,8 +94,7 @@ $enable-validation-icons: false;
 // Define the maximum width of `.container` for different screen sizes.
 // scss-docs-start container-max-widths
 
-$container-max-widths: (
-  sm: 540px,
+$container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1170px,
@@ -134,5 +137,14 @@ $btn-link-hover-color: $link-hover-color;
 
 $btn-block-spacing-y: 0.5rem !default;
 
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-transition: color 0.15s ease-in-out,
+background-color 0.15s ease-in-out,
+border-color 0.15s ease-in-out,
+box-shadow 0.15s ease-in-out !default;
+
+// Badges
+
+$badge-font-size: $font-size-sm;
+$badge-font-weight: $font-weight-bold;
+$badge-padding-x: 0.5rem;
+$badge-border-radius: $border-radius !default;

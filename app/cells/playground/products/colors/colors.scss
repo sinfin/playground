@@ -5,6 +5,21 @@
 
 .p-products-colors-item {
   padding: 5px;
+  position: relative;
+
+  &[data-selected] {
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 2px solid black;
+      top: 5px;
+      left: 5px;
+      bottom: 5px;
+      right: 5px;
+    }
+  }
 
   &__square {
     display: block;

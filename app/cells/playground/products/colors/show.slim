@@ -3,7 +3,7 @@
 
   .p-products-colors.mb-5
     - model.each do |item|
-      .p-products-colors-item
+      .p-products-colors-item[data-selected=item[:selected]]
         span.p-products-colors-item__square[
           style="background-color:#{item[:value]}"
           data-border=item[:addBorder]
