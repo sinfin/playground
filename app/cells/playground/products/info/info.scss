@@ -1,0 +1,42 @@
+.p-products-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: $border-width dashed $gray-200;
+  border-bottom: $border-width dashed $gray-200;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: $gray-light;
+
+  &__right,
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    width: 160px;
+  }
+
+  &__originalPrice {
+    text-decoration: line-through;
+  }
+
+  &__actualPrice {
+    font-size: $font-size-xl;
+    font-family: $font-family-polaris;
+
+    strong {
+      font-weight: bold;
+      font-family: $font-family-sans-serif-default;
+    }
+  }
+
+  &__productionTime {
+    border-bottom: $border-width dashed $gray-200;
+    color: $gray-light;
+    font-size: $font-size-sm;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

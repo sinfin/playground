@@ -1,12 +1,13 @@
 $black: black;
 $white: white;
 $body-color: $black;
-$gray: #8c8c8c;
-$gray-100: #b8b8b8; // Input, Textarea border
-$gray-200: #c5c5c5; // Radio, Checkbox border
-$gray-300: #cdcdcd; // Radio, Checkbox border
-$gray-400: #e2e2e2; // General border color
-$gray-500: #f0f0f0; // Form element background
+$gray: #8C8C8C;
+$gray-100: #B8B8B8; // Input, Textarea border
+$gray-200: #C5C5C5; // Radio, Checkbox border
+$gray-300: #CDCDCD; // Radio, Checkbox border
+$gray-400: #E2E2E2; // General border color
+$gray-500: #F0F0F0; // Form element background
+$gray-light: #212121;
 
 $primary: $black;
 $secondary: $gray;
@@ -51,6 +52,7 @@ $font-weight-bold: bold;
 $font-size-base: 0.875rem; // 14px
 $font-size-sm: 0.75rem; // 12px
 $font-size-lg: 1rem; // 16px
+$font-size-xl: 1.25rem; // 20px
 
 $headings-color: $body-color;
 $headings-font-weight: $font-weight-bold;
