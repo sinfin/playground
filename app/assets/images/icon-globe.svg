@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="22px" viewBox="0 0 32 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-globe</title>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="_Icons" transform="translate(-1269.000000, -592.000000)">
+            <g id="icon-globe" transform="translate(1270.000000, 593.000000)">
+                <circle id="Oval-Copy-5" stroke="#000000" cx="14.3022696" cy="10" r="10"></circle>
+                <path d="M4.30226959,8.87989614 C-1.25662468,11.483533 -4.78243185,21.3478582 15.6724701,15.4603762 C36.127372,9.57289424 30.3522553,2.68850716 22.463277,4.05062616" id="Path-6-Copy" stroke="#000000"></path>
+                <circle id="Oval" fill="#000000" cx="19.4639129" cy="14" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -3,4 +3,20 @@
   &__data {
     padding-left: 45px;
   }
+
+  &__specification {
+    font-size: $font-size-sm;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+
+  &__specificationItem {
+    display: flex;
+    align-items: center;
+
+    &+& {
+      margin-top: 1rem;
+    }
+  }
 }
