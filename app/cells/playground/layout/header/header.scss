@@ -6,12 +6,18 @@
     justify-content: space-between;
   }
 
-  &__left {
-  }
-
   &__right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
+
+  &__basket {
+    background: asset-url('icon-cart-negative') right center no-repeat;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    color: $white;
+    padding-right: 1.25rem;
+  }
+
 }

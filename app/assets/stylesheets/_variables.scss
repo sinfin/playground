@@ -12,6 +12,7 @@ $gray-light: #212121;
 $primary: $black;
 $secondary: $gray;
 $danger: #d0021b;
+$dark: $black;
 
 // Options
 //
@@ -35,6 +36,15 @@ $spacers: (0: 0,
   4: $spacer * 1.25,
   5: $spacer * 1.5,
 );
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $black;
+
 
 // Components
 //
@@ -69,6 +79,10 @@ sans-serif,
 $font-family-sans-serif: $font-family-sans-serif-default;
 $font-family-polaris: "Polaris-Light",
 $font-family-sans-serif-default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
 
 $headings-margin-top: $spacer / 2;
 $headings-margin-bottom: $spacer * 0.75;
@@ -150,3 +164,16 @@ $badge-font-size: $font-size-sm;
 $badge-font-weight: $font-weight-bold;
 $badge-padding-x: 0.5rem;
 $badge-border-radius: $border-radius !default;
+
+
+// Navs
+
+$nav-link-padding-y: 1rem;
+$nav-link-font-weight: $font-weight-bold;
+
+// Navbar
+
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-x: 1.5rem;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $navbar-dark-color;

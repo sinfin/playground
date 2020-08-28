@@ -10,3 +10,37 @@
       a.small.mr-2 href = "/login" Přihlášení
       a.small href = "/registrace" Registrace
       span.p-layout-header__flag [data-flag="cs"]
+nav.navbar.navbar-dark.bg-dark
+  .container
+    .show.collapse.navbar-expand-lg[id="navbarNav"]
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link[href="#"] = 'Vše'
+        li.nav-item
+          a.nav-link[href="#"] = 'Fotky'
+        li.nav-item
+          a.nav-link.active[href="#"] = 'Fotomagnety'
+        li.nav-item.nav-item__subItems
+          a.nav-link[href="#"] = 'Fotoknihy'
+        li.nav-item
+          a.nav-link[href="#"] = 'Fotky na zeď'
+        li.nav-item
+          a.nav-link[href="#"] = 'Doplňky'
+        li.nav-item
+          a.nav-link[href="#"] = 'Pŕíležitost'
+        li.nav-item
+          a.nav-link[href="#"] = 'Magazín'
+    a.p-layout-header__basket[
+      href="/basket"
+      data-items="10"
+    ] = 'Košík'
+/*
+    button.navbar-toggler[
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    ]
+      span.navbar-toggler-icon
