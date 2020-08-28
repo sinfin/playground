@@ -8,11 +8,14 @@ $gray-300: #CDCDCD; // Radio, Checkbox border
 $gray-400: #E2E2E2; // General border color
 $gray-500: #F0F0F0; // Form element background
 $gray-light: #212121;
+$gray-footer: #F3F3F3; // Footer BG
 
 $primary: $black;
 $secondary: $gray;
 $danger: #d0021b;
 $dark: $black;
+$info: red;
+
 
 // Options
 //
@@ -75,6 +78,12 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol";
+
+$text-muted: $gray;
+
+$hr-margin-y: $spacer * 3;
+$hr-color: null;
+$hr-opacity: 1;
 
 $font-family-sans-serif: $font-family-sans-serif-default;
 $font-family-polaris: "Polaris-Light",

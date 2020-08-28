@@ -1,3 +1,25 @@
 .p-layout-footer
   .container
-    ' footer
+    .row
+      .col-6
+        h2.h1mag
+          'Slevový kód na 10 % za Vaši<br>e-mailovou adresu'
+
+          form.form[
+            method="post"
+            action="#"
+          ]
+
+        p
+          strong = 'Budeme Vám posílat milé zprávy'
+          = ' a dozvíte se o všech novinkácha soutěžích.'
+        p.small.text-muted
+          = 'Váš osobní e-mail budeme'
+          = ' (Squared, s.r.o)'
+          = ' zpracovávat pouze za účelem zasílání relevantních'
+          = ' informací v souladu s platnou legislativou'
+          = ' a zásadami ochrany osobních údajů.'
+
+      .col-6
+        'right
+    hr.hr

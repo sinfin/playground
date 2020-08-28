@@ -17,7 +17,39 @@
     font-weight: $font-weight-bold;
     text-decoration: none;
     color: $white;
-    padding-right: 1.25rem;
+    padding: 1rem 2.5rem 1rem 0;
+    position: relative;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+
+    &::after {
+      content: attr(data-count);
+      font-size: 11px;
+      background-color: $white;
+      color: $black;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      right: -6px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+    }
   }
 
+  &__flag {
+    width: 24px;
+    height: 16px;
+    margin-left: 20px;
+
+    //TODO: Dodat SVG.
+    &[data-flag="cs"] {
+      background: asset-url('icon-flag-cz');
+    }
+
+  }
 }
