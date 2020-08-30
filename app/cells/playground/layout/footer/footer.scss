@@ -1,3 +1,38 @@
 .p-layout-footer {
   background: $gray-footer;
+  padding: 60px 0;
+
+  &__socialLinks {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__socialItem {
+    &+& {
+      margin-left: 70px;
+    }
+  }
+
+  &__socialLink {
+    color: $link-color;
+    display: inline-block;
+    font-size: $font-size-sm;
+    text-align: center;
+    text-decoration: underline !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  .icon {
+    border: $border-width solid $gray-light;
+    color: $gray-light;
+    display: block;
+    margin-bottom: 8px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
 }

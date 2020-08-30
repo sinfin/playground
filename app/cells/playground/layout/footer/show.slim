@@ -2,12 +2,22 @@
   .container
     .row
       .col-6
-        h2.h1mag
+        h2.h1mag.mt-0.mb-4
           'Slevový kód na 10 % za Vaši<br>e-mailovou adresu'
 
-          form.form[
-            method="post"
-            action="#"
+        form.form[
+          class="mb-4"
+          method='post'
+          action='#'
+        ]
+          input.form-control[
+            type="text"
+            placeholder="váš e-mail"
+          ]
+
+          button.btn.btn-primary[
+            type="submit"
+            value="Odeslat"
           ]
 
         p
@@ -21,5 +31,24 @@
           = ' a zásadami ochrany osobních údajů.'
 
       .col-6
-        'right
+        h2.h3.mt-2.mb-4 = 'Sledujte naše sítě'
+        ul.p-layout-footer__socialLinks
+          li.p-layout-footer__socialItem
+            a.p-layout-footer__socialLink[
+              href="#"
+            ]
+              span.icon.icon__instagram
+              = 'Instagram'
+          li.p-layout-footer__socialItem
+            a.p-layout-footer__socialLink[
+              href="#"
+            ]
+              span.icon.icon__pinterest
+              = 'Pinterest'
+          li.p-layout-footer__socialItem
+            a.p-layout-footer__socialLink[
+              href="#"
+            ]
+              span.icon.icon__facebook
+              = 'Facebook'
     hr.hr

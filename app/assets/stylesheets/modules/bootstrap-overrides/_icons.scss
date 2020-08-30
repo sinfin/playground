@@ -5,6 +5,10 @@
   width: 32px;
   height: 32px;
 
+  &__facebook {
+    background-image: asset-url("icon-facebook.svg");
+  }
+
   &__globe {
     background-image: asset-url("icon-globe.svg");
   }
@@ -13,8 +17,16 @@
     background-image: asset-url("icon-guarantee.svg");
   }
 
+  &__instagram {
+    background-image: asset-url("icon-instagram.svg");
+  }
+
   &__mobile {
     background-image: asset-url("icon-mobile.svg");
+  }
+
+  &__pinterest {
+    background-image: asset-url("icon-pinterest.svg");
   }
 
 }
