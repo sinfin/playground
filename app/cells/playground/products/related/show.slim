@@ -1,0 +1,16 @@
+- if model.count > 0
+  .p-products-related
+    .h2.p-products-related__title.text-center = 'Související produkty'
+    .row
+      - model.each do |item|
+        .col-4
+          .card.p-products-related__item
+            img.card-img-top [
+              src=item[:imageUrl]
+              alt=item[:name]
+            ]
+            .card-body.text-center
+              h3.p-products-related__name=item[:name]
+              = 'Od '
+              = item[:price]
+              = ',- Kč / ks'

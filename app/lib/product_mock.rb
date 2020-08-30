@@ -84,4 +84,24 @@ class ProductMock < OpenStruct
       },
     ]
   end
+
+  def related
+    [
+      {
+        name: "Fotky polaroidky",
+        imageUrl: "https://picsum.photos/id/1/360/240",
+        price: "9",
+      },
+      {
+        name: "Magnetické vzpomínky",
+        imageUrl: "https://picsum.photos/id/10/360/240",
+        price: "39",
+      },
+      {
+        name: "Plakáty",
+        imageUrl: "https://picsum.photos/id/20/360/240",
+        price: "780",
+      },
+    ]
+  end
 end

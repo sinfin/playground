@@ -177,6 +177,24 @@ $badge-padding-x: 0.5rem;
 $badge-border-radius: $border-radius !default;
 
 
+
+// Cards
+
+$card-spacer-y: $spacer !default;
+$card-spacer-x: $spacer !default;
+$card-title-spacer-y: $spacer / 2 !default;
+$card-border-width: 0;
+$card-border-radius: 0;
+$card-border-color: transparent;
+$card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default;
+$card-cap-padding-y: $card-spacer-y / 2 !default;
+$card-cap-padding-x: $card-spacer-x !default;
+$card-cap-bg: rgba($black, .03) !default;
+$card-cap-color: null !default;
+$card-height: null !default;
+$card-color: null !default;
+$card-bg: null;
+
 // Navs
 
 $nav-link-padding-y: 1rem;
