@@ -1,6 +1,6 @@
 .p-layout-footer {
   background: $gray-footer;
-  padding: 60px 0;
+  padding: 60px 0 40px 0;
 
   &__socialLinks {
     display: inline-flex;
@@ -34,5 +34,58 @@
     width: 70px;
     height: 70px;
     border-radius: 50%;
+  }
+
+  &__navigation {
+    list-style: none;
+    font-size: $font-size-sm;
+    font-weight: bold;
+    padding: 0;
+  }
+
+  &__navigationItem {
+    &+& {
+      margin-top: 20px;
+    }
+  }
+
+  &__fbWidget {
+    border-top: $border-width dashed $gray-200;
+    border-bottom: $border-width dashed $gray-200;
+    padding: 20px 0;
+  }
+
+  &__fbWidgetContent {
+    width: 470px;
+
+    &::before {
+      content: 'Facebook widget content';
+      display: block;
+      color: $black;
+      background-color: $gray-400;
+      line-height: 90px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+    color: $gray;
+    white-space: nowrap;
+    padding-top: 30px;
+
+    .col-3 {
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__linkFlag {
+    background: asset-url('icon-flag-cz.png') no-repeat 0 2px;
+    padding-left: 30px;
   }
 }
