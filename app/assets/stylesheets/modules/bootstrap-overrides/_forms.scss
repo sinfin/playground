@@ -1,0 +1,16 @@
+.form {
+  &__discount {
+    position: relative;
+    max-width: 360px;
+    margin-bottom: 20px;
+
+    .btn {
+      font-size: $font-size-sm;
+      position: absolute;
+      right: 5px;
+      top: 6px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+}

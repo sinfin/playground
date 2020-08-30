@@ -87,5 +87,19 @@
   &__linkFlag {
     background: asset-url('icon-flag-cz.png') no-repeat 0 2px;
     padding-left: 30px;
+    position: relative;
+    padding-right: 15px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 7px;
+      position: absolute;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8'?%3e%3csvg width='9px' height='7px' viewBox='0 0 9 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ctitle%3ebtn-form-select copy%3c/title%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='d.hd.header-new' transform='translate(-473.000000, -107.000000)' fill='%238C8C8C'%3e%3cg id='Group-6' transform='translate(395.000000, 103.000000)'%3e%3cg id='btn-form-select-copy' transform='translate(78.000000, 4.000000)'%3e%3cpolygon id='btn-form-select' points='0.483130586 0.828222204 4.31632263 6.76143167 8.14951468 0.828222204'%3e%3c/polygon%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+      right: 0;
+      top: 50%;
+      margin-top: -4px;
+    }
   }
 }
