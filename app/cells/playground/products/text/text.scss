@@ -1,0 +1,41 @@
+.p-products-text {
+  background: $gray-footer;
+  padding: 56px 0 80px 0;
+
+  &__content {
+    line-height: 22px;
+  }
+
+  &__container {
+    position: relative;
+    overflow: hidden;
+    max-height: 250px;
+
+    &.visible {
+      overflow: auto;
+      max-height: unset;
+
+      &::after {
+        opacity: 0;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0px;
+      content: '';
+      display: block;
+      height: 121px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(243, 243, 243, 0) 0%, #F3F3F3 100%);
+      z-index: 10;
+    }
+  }
+
+
+  &__button {
+    z-index: 11;
+    text-align: center;
+    width: 100%;
+  }
+}
