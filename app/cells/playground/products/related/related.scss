@@ -7,7 +7,12 @@
     margin-bottom: 30px;
   }
 
-  .p-products-related__name {
+  &__name {
     margin: 0;
+  }
+
+  &__buttonWrapper {
+    text-align: center;
+    padding: 36px 0 60px;
   }
 }

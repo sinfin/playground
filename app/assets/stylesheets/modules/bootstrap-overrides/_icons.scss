@@ -5,6 +5,19 @@
   width: 32px;
   height: 32px;
 
+  &__circular {
+    border: $border-width solid $gray-light;
+    color: $gray-light;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  &__delivery {
+    background-image: asset-url("icon-delivery.svg");
+  }
+
   &__facebook {
     background-image: asset-url("icon-facebook.svg");
   }
@@ -29,4 +42,7 @@
     background-image: asset-url("icon-pinterest.svg");
   }
 
+  &__stopwatch {
+    background-image: asset-url("icon-stopwatch.svg");
+  }
 }

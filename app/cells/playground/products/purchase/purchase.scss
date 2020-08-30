@@ -1,0 +1,17 @@
+.products-purchase {
+  &__list {
+    font-size: $font-size-sm;
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item {
+    width: 25%;
+    text-align: center;
+
+    .icon {
+      margin: 0 auto 20px auto;
+    }
+  }
+}
