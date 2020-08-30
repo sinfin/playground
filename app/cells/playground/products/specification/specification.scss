@@ -1,0 +1,12 @@
+.p-products-specification {
+  &__text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__parallax {
+    margin: 60px auto;
+    display: block;
+  }
+}
