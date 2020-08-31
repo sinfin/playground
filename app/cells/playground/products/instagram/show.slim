@@ -1,0 +1,10 @@
+- if model.count > 0
+  .p-products-instagram
+    .h2.p-products-instagram__title = 'Your #squaredone photos from Instagram'
+    .row
+      - model.each do |item|
+        .col-3
+            img [
+              src = item[:imageUrl]
+              alt = item[:name]
+            ]

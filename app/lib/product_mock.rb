@@ -104,4 +104,25 @@ class ProductMock < OpenStruct
       },
     ]
   end
+
+  def instagram
+    [
+      {
+        name: "Fotky polaroidky",
+        imageUrl: "https://picsum.photos/id/1/262/262",
+      },
+      {
+        name: "Magnetické vzpomínky",
+        imageUrl: "https://picsum.photos/id/10/262/262",
+      },
+      {
+        name: "Plakáty",
+        imageUrl: "https://picsum.photos/id/20/262/262",
+      },
+      {
+        name: "Blahbla",
+        imageUrl: "https://picsum.photos/id/30/262/262",
+      },
+    ]
+  end
 end
