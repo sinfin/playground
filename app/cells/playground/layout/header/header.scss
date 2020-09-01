@@ -106,19 +106,31 @@
     }
   }
 
+  .p-layout-header__cartIcon {
+    position: relative;
+
+    &::before {
+      content: attr(data-count);
+      font-size: 11px;
+      background-color: $black;
+      color: $white;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      right: -6px;
+      top: -6px;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+    }
+  }
+
   &__basket {
     font-weight: $font-weight-bold;
     text-decoration: none;
     color: $white;
     padding: 1rem 2.5rem 1rem 0;
     position: relative;
-
-    .p-layout-header__cartIcon {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      margin-top: -17px;
-    }
 
     &:hover {
       color: $white;
