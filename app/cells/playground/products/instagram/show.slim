@@ -3,7 +3,7 @@
     .h2.p-products-instagram__title = 'Your #squaredone photos from Instagram'
     .row
       - model.each do |item|
-        .col-3
+        .col-6.col-sm-3
             img.p-products-instagram__image [
               src = item[:imageUrl]
               alt = item[:name]
