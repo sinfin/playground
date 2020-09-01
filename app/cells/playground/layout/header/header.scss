@@ -65,6 +65,47 @@
     background: asset-url('icon-cart-negative');
   }
 
+  &__navbarToggler {
+    background: transparent;
+    border: 0;
+    width: 32px;
+    height: 35px;
+    display: inline-flex;
+    align-items: flex-end;
+    padding: 0;
+    position: relative;
+    font-size: $font-size-sm;
+    margin-left: 24px;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+    }
+
+    &::before,
+    &::after,
+    span {
+      position: absolute;
+      height: $border-width;
+      width: 100%;
+      left: 0;
+      background-color: $gray-light;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    span {
+      top: 7px;
+    }
+
+    &::after {
+      top: 14px;
+    }
+  }
+
   &__basket {
     font-weight: $font-weight-bold;
     text-decoration: none;
