@@ -18,6 +18,12 @@
       width: 100%;
       padding: #{$spacer * 0.75} 0;
     }
+
+    @include media-breakpoint-down(sm) {
+      .p-layout-header__claim {
+        display: none;
+      }
+    }
   }
 
   &__right {
