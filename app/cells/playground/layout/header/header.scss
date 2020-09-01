@@ -4,12 +4,33 @@
     align-items: center;
     height: 86px;
     justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+      height: auto;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__left {
+    @include media-breakpoint-down(md) {
+      border-bottom: #{$border-width * 2} dashed $gray-200;
+      width: 100%;
+      padding: #{$spacer * 0.75} 0;
+    }
   }
 
   &__right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include media-breakpoint-down(md) {
+      border-bottom: #{$border-width * 2} dashed $gray-200;
+      width: 100%;
+      align-content: flex-end;
+      padding: #{$spacer / 2} 0;
+    }
   }
 
   &__basket {

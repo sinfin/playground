@@ -20,18 +20,33 @@ h6, .h6
   letter-spacing: $headings-letter-spacing
   margin-bottom: $headings-margin-bottom
 
+  @include media-breakpoint-down(md)
+    margin-bottom: #{$headings-margin-bottom / 2}
+
 h1, .h1
   font-family: $font-family-polaris
+
+  @include media-breakpoint-down(md)
+    font-size: $h1-font-size-mobile
 
 .h1mag
   font-size: $h1mag-font-size
   font-family: $font-family-polaris
 
+  @include media-breakpoint-down(md)
+    font-size: $h1mag-font-size-mobile
+
 h2, .h2
   font-family: $font-family-polaris
 
+  @include media-breakpoint-down(md)
+    font-size: $h2-font-size-mobile
+
 h3, .h3
   font-weight: $font-weight-bold
+
+  @include media-breakpoint-down(md)
+    font-size: $h3-font-size-mobile
 
 small,
 .font-size-sm
@@ -44,3 +59,7 @@ small,
   border-top: 0
   height: 0.5rem
   background: asset-url('separator.svg') no-repeat
+
+.lead
+  @include media-breakpoint-down(md)
+    font-size: $font-size-lead-mobile

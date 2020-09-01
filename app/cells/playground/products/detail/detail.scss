@@ -2,6 +2,10 @@
 
   &__data {
     padding-left: 45px;
+
+    @include media-breakpoint-down(md) {
+      padding-left: #{$grid-gutter-width / 2};
+    }
   }
 
   &__infoList {

@@ -66,6 +66,7 @@ $font-weight-bold: bold;
 $font-size-base: 0.875rem; // 14px
 $font-size-sm: 0.75rem; // 12px
 $font-size-lg: 1rem; // 16px
+$font-size-lead-mobile: 1.125rem; // 18px
 $font-size-xl: 1.25rem; // 20px
 
 $headings-color: $body-color;
@@ -74,6 +75,7 @@ $headings-letter-spacing: normal;
 $headings-line-height: 1.25;
 
 $lead-font-size: $font-size-xl;
+$lead-font-size-mobile: $font-size-lead-mobile;
 
 $font-family-sans-serif-default: "Helvetica Neue",
 Arial,
@@ -99,9 +101,17 @@ $line-height-lg: 2 !default;
 $headings-margin-bottom: $spacer * 2;
 
 $h1-font-size: 62px;
-$h1mag-font-size: 32px;
+$h1-font-size-mobile: 36px;
+
+$h1mag-font-size: 44px;
+$h1mag-font-size-mobile: 32px;
+
 $h2-font-size: 36px;
+$h2-font-size-mobile: 24px;
+
 $h3-font-size: 16px;
+$h3-font-size-mobile: 15px;
+
 $h4-font-size: 12px;
 
 $enable-validation-icons: false;
@@ -127,6 +137,20 @@ $link-color: #8c8c8c;
 $link-decoration: underline !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1280px);
+// scss-docs-end grid-breakpoints
 
 // Breadcrumbs
 $breadcrumb-font-size: 0.75rem;
