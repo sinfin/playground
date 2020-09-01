@@ -4,7 +4,7 @@
     .h2.p-products-related__title.text-center = 'Související produkty'
     .row
       - model.each do |item|
-        .col-4
+        .col-sm-4
           .card.p-products-related__item
             img.card-img-top [
               src = item[:imageUrl]
