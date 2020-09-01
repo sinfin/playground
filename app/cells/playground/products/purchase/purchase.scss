@@ -4,11 +4,21 @@
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: -30px;
+    }
   }
 
   &__item {
     width: 25%;
     text-align: center;
+
+    @include media-breakpoint-down(md) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
 
     .icon {
       margin: 0 auto 20px auto;

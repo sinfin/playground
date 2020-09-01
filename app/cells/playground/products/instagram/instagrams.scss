@@ -1,10 +1,6 @@
 .p-products-instagram {
   padding: 40px 0;
 
-  @include media-breakpoint-down(md) {
-    padding: 20px 0;
-  }
-
   &__title {
     text-align: center;
   }

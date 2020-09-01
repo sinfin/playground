@@ -3,7 +3,9 @@
     .row
       .col-6
         h2.h1mag.mt-0.mb-4
-          'Slevový kód na 10 % za Vaši<br>e-mailovou adresu'
+          'Slevový kód na 10 % za Vaši
+          br.d-none.d-lg-block
+          'e-mailovou adresu
 
         form.form.form__discount[
           method='post'
@@ -144,24 +146,24 @@
         .p-layout-footer__fbWidget
           .p-layout-footer__fbWidgetContent
     .row.p-layout-footer__text
-      .col-3
+      .col-md-6.col-lg-3
         a.text-light[
           href="mailto:info@vyvolej.to"
         ]
           = 'info@vyvolej.to'
         = ', +420 777 244 402'
-      .col-3
+      .col-md-6.col-lg-3
         = 'Provozuje&nbsp;'
         a.text-muted[href="#"] = 'Squared'
         = '&nbsp;s.r.o.'
         a.ml-1.text-muted[href="#"] = 'Impressum'
-      .col-3
+      .col-md-6.col-lg-3
         span = 'Platební brána '
-        img.ml-2[
+        img.ml-lg-2[
           src='/assets/icon-payments.svg'
           alt='Payments'
         ]
-      .col-3
+      .col-md-6.col-lg-3
         a.p-layout-footer__linkFlag[
           href="#"
         ]
