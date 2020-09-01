@@ -13,6 +13,8 @@
   }
 
   &__left {
+    position: relative;
+
     @include media-breakpoint-down(md) {
       border-bottom: #{$border-width * 2} dashed $gray-200;
       width: 100%;
@@ -39,13 +41,43 @@
     }
   }
 
+  &__actions {
+    display: none;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-down(md) {
+      display: inline-flex;
+    }
+  }
+
+  &__cartIcon {
+    display: inline-block;
+    height: 35px;
+    width: 31px;
+    background: asset-url('icon-cart');
+  }
+
+  &__cartIconNegative {
+    background: asset-url('icon-cart-negative');
+  }
+
   &__basket {
-    background: asset-url('icon-cart-negative') right center no-repeat;
     font-weight: $font-weight-bold;
     text-decoration: none;
     color: $white;
     padding: 1rem 2.5rem 1rem 0;
     position: relative;
+
+    .p-layout-header__cartIcon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -17px;
+    }
 
     &:hover {
       color: $white;
