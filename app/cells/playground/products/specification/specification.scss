@@ -5,9 +5,17 @@
     align-items: center;
   }
 
+  &__image {
+    max-width: 100%;
+  }
+
   &__parallax {
     margin: 60px auto;
     display: block;
     max-width: 100%;
+
+    @include media-breakpoint-down(md) {
+      margin: 30px auto;
+    }
   }
 }

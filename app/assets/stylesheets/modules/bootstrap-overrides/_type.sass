@@ -60,6 +60,9 @@ small,
   height: 0.5rem
   background: asset-url('separator.svg') no-repeat
 
+  @include media-breakpoint-down(md)
+    margin: $hr-margin-y-mobile 0
+
 .lead
   @include media-breakpoint-down(md)
     font-size: $font-size-lead-mobile
