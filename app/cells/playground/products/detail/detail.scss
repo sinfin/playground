@@ -1,5 +1,4 @@
 .p-products-detail {
-
   &__data {
     padding-left: 45px;
 
@@ -8,14 +7,14 @@
     }
   }
 
-  &__infoList {
+  &__info-list {
     font-size: $font-size-sm;
     list-style: none;
     padding: 0;
     margin: 32px 0;
   }
 
-  &__infoListItem {
+  &__info-list-item {
     display: flex;
     align-items: center;
 

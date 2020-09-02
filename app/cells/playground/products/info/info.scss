@@ -34,14 +34,14 @@
     text-decoration: line-through;
   }
 
-  &__actualPrice {
+  &__actual-price {
     font-size: $font-size-xl;
     font-family: $font-family-polaris;
+  }
 
-    strong {
-      font-weight: bold;
-      font-family: $font-family-sans-serif-default;
-    }
+  &__actual-price-strong {
+    font-weight: bold;
+    font-family: $font-family-sans-serif-default;
   }
 
   &__productionTime {

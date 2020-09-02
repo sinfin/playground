@@ -4,7 +4,7 @@
   @include media-breakpoint-down(sm) {
     margin-bottom: -30px;
 
-    .col-6 {
+    &__col {
       margin-bottom: 30px;
     }
   }

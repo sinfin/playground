@@ -1,14 +1,17 @@
 .p-products-info
   .p-products-info__left
     .p-products-info__discount
-      span.badge.badge-danger.badge-circular.mr-2 = 'SLEVA'
+      span.badge.badge-danger.badge-circular.mr-2 SLEVA
     .p-products-info__prices
-      .p-products-info__originalPrice = 'Od 39 Kč /'
-      .p-products-info__actualPrice
-        'Od
-        strong.text-danger = '35 '
+      .p-products-info__originalPrice
+        ' Od 39 Kč /
+      .p-products-info__actual-price
+        ' Od
+        strong.text-danger.p-products-info__actual-price-strong 35
         ' Kč / ks
   .p-products-info__right
-    a.btn.btn-block.btn-3d.inverse[button-text='Create'] = 'Create'
+    a.btn.btn-block.btn-3d.inverse button-text='Create'
+      ' Create
+
 .p-products-info__productionTime
   'Production time is one business day.
