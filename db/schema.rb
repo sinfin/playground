@@ -10,24 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_30_181721) do
+ActiveRecord::Schema.define(version: 2021_02_16_115118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "unaccent"
 
   create_folio_unaccent
-
-  create_table "ahoy_events", force: :cascade do |t|
-    t.integer "visit_id"
-    t.bigint "account_id"
-    t.string "name"
-    t.jsonb "properties"
-    t.datetime "time"
-    t.index ["account_id"], name: "index_ahoy_events_on_account_id"
-    t.index ["name", "time"], name: "index_ahoy_events_on_name_and_time"
-    t.index ["visit_id", "name"], name: "index_ahoy_events_on_visit_id_and_name"
-  end
 
   create_table "audits", force: :cascade do |t|
     t.bigint "auditable_id"
@@ -44,9 +33,11 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.string "remote_address"
     t.string "request_uuid"
     t.datetime "created_at"
+    t.integer "placement_version"
     t.index ["associated_type", "associated_id"], name: "associated_index"
     t.index ["auditable_type", "auditable_id", "version"], name: "auditable_index"
     t.index ["created_at"], name: "index_audits_on_created_at"
+    t.index ["placement_version"], name: "index_audits_on_placement_version"
     t.index ["request_uuid"], name: "index_audits_on_request_uuid"
     t.index ["user_id", "user_type"], name: "user_index"
   end
@@ -108,6 +99,21 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.index ["type"], name: "index_folio_content_templates_on_type"
   end
 
+  create_table "folio_email_templates", force: :cascade do |t|
+    t.string "title"
+    t.string "slug"
+    t.string "mailer"
+    t.string "action"
+    t.string "subject_en"
+    t.text "body_html_en"
+    t.text "body_text_en"
+    t.jsonb "required_keywords"
+    t.jsonb "optional_keywords"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_folio_email_templates_on_slug"
+  end
+
   create_table "folio_file_placements", force: :cascade do |t|
     t.string "placement_type"
     t.bigint "placement_id"
@@ -163,13 +169,10 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.string "url"
     t.json "additional_data"
     t.string "aasm_state", default: "submitted"
-    t.bigint "visit_id"
-    t.index ["visit_id"], name: "index_folio_leads_on_visit_id"
   end
 
   create_table "folio_menu_items", force: :cascade do |t|
     t.bigint "menu_id"
-    t.string "type"
     t.string "ancestry"
     t.string "title"
     t.string "rails_path"
@@ -180,10 +183,11 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.bigint "target_id"
     t.string "url"
     t.boolean "open_in_new"
+    t.string "style"
+    t.integer "folio_page_id"
     t.index ["ancestry"], name: "index_folio_menu_items_on_ancestry"
     t.index ["menu_id"], name: "index_folio_menu_items_on_menu_id"
     t.index ["target_type", "target_id"], name: "index_folio_menu_items_on_target_type_and_target_id"
-    t.index ["type"], name: "index_folio_menu_items_on_type"
   end
 
   create_table "folio_menus", force: :cascade do |t|
@@ -191,6 +195,7 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "locale"
+    t.string "title"
     t.index ["type"], name: "index_folio_menus_on_type"
   end
 
@@ -198,8 +203,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "visit_id"
-    t.index ["visit_id"], name: "index_folio_newsletter_subscriptions_on_visit_id"
   end
 
   create_table "folio_pages", force: :cascade do |t|
@@ -249,6 +252,26 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.string "hash_id"
     t.index ["attachmentable_type", "attachmentable_id"], name: "index_folio_private_attachments_on_attachmentable"
     t.index ["type"], name: "index_folio_private_attachments_on_type"
+  end
+
+  create_table "folio_session_attachments", force: :cascade do |t|
+    t.string "hash_id"
+    t.string "file_uid"
+    t.string "file_name"
+    t.bigint "file_size"
+    t.string "file_mime_type"
+    t.string "type"
+    t.string "web_session_id"
+    t.string "placement_type"
+    t.bigint "placement_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "file_width"
+    t.integer "file_height"
+    t.index ["hash_id"], name: "index_folio_session_attachments_on_hash_id"
+    t.index ["placement_type", "placement_id"], name: "index_folio_session_attachments_on_placement"
+    t.index ["type"], name: "index_folio_session_attachments_on_type"
+    t.index ["web_session_id"], name: "index_folio_session_attachments_on_web_session_id"
   end
 
   create_table "folio_sites", force: :cascade do |t|
@@ -317,37 +340,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_181721) do
     t.integer "taggings_count", default: 0
     t.index "to_tsvector('simple'::regconfig, folio_unaccent(COALESCE((name)::text, ''::text)))", name: "index_tags_on_by_query", using: :gin
     t.index ["name"], name: "index_tags_on_name", unique: true
-  end
-
-  create_table "visits", force: :cascade do |t|
-    t.string "visit_token"
-    t.string "visitor_token"
-    t.string "ip"
-    t.text "user_agent"
-    t.text "referrer"
-    t.text "landing_page"
-    t.bigint "account_id"
-    t.string "referring_domain"
-    t.string "search_keyword"
-    t.string "browser"
-    t.string "os"
-    t.string "device_type"
-    t.integer "screen_height"
-    t.integer "screen_width"
-    t.string "country"
-    t.string "region"
-    t.string "city"
-    t.string "postal_code"
-    t.decimal "latitude"
-    t.decimal "longitude"
-    t.string "utm_source"
-    t.string "utm_medium"
-    t.string "utm_term"
-    t.string "utm_content"
-    t.string "utm_campaign"
-    t.datetime "started_at"
-    t.index ["account_id"], name: "index_visits_on_account_id"
-    t.index ["visit_token"], name: "index_visits_on_visit_token", unique: true
   end
 
 end
